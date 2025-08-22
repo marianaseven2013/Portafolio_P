@@ -7,18 +7,41 @@ function renderCentroControl() {
     section.appendChild(titulo);
 
     const proyectos = [
-        { nombre: "Página Asistencia", stacks: "[ html,css,render,overcloud ]", categoria: "finished", repo: "https://marianaseven2013.github.io/Asistencia-Examen/" },
-        { nombre: "Juegos", stacks: "[ html,css,javascript, render, overcloud]", categoria: "finished", repo: "https://cartasfronted.onrender.com/" },
-        { nombre: "Dashboard Raspberry pi pico W", stacks: "[ html,css,javascript,fireBase ]", categoria: "finished", repo: "#" },
-        { nombre: "Juego de memoria", stacks: "[ html,css,javascript ]", categoria: "finished", repo: "#" },
-        { nombre: "Galería de Productos", stacks: "[ html,css,javascript ]", categoria: "finished", repo: "https://marianaseven2013.github.io/galeria-deProductos/" },
-        { nombre: "Finanzas personales", stacks: "[ Notion ]", categoria: "Notion", repo: "#" },
-       
+        { 
+            nombre: "Página Asistencia", 
+            stacks: "[ html, css, render, overcloud ]", 
+            categoria: "finished", 
+            deploy: "https://marianaseven2013.github.io/Asistencia-Examen/", 
+            repo: "https://github.com/marianaseven2013/Asistencia-Examen" 
+        },
+        { 
+            nombre: "Juegos", 
+            stacks: "[ html, css, javascript, render, overcloud]", 
+            categoria: "finished", 
+            deploy: "https://cartasfronted.onrender.com/", 
+            repo: "https://github.com/marianaseven2013/cartasfronted" 
+        },
+        { 
+            nombre: "Dashboard Raspberry pi pico W", 
+            stacks: "[ html, css, javascript, fireBase ]", 
+            categoria: "finished", 
+            deploy: "#", 
+            repo: "https://github.com/marianaseven2013/dashboard-pico-w" 
+        },
+        { 
+            nombre: "Galería de Productos", 
+            stacks: "[ html, css, javascript ]", 
+            categoria: "finished", 
+            deploy: "https://marianaseven2013.github.io/galeria-deProductos/", 
+            repo: "https://github.com/marianaseven2013/galeria-deProductos" 
+        },
     ];
 
+    // Crear tabla
     let tabla = document.createElement("table");
     tabla.className = "tabla-proyectos";
 
+    // Cabecera
     let thead = document.createElement("thead");
     thead.innerHTML = `
         <tr>
@@ -30,14 +53,16 @@ function renderCentroControl() {
     `;
     tabla.appendChild(thead);
 
+    // Cuerpo de la tabla
     let tbody = document.createElement("tbody");
     proyectos.forEach(p => {
         let fila = document.createElement("tr");
 
-        // Nombre proyecto con link
+        // Nombre proyecto con link al deploy
         let colProyecto = document.createElement("td");
         let linkProyecto = document.createElement("a");
-        linkProyecto.href = p.repo; // aquí pondrás tus links
+        linkProyecto.href = p.deploy;
+        linkProyecto.target = "_blank"; // abre en nueva pestaña
         linkProyecto.textContent = p.nombre;
         colProyecto.appendChild(linkProyecto);
         fila.appendChild(colProyecto);
@@ -52,7 +77,7 @@ function renderCentroControl() {
         colCat.textContent = p.categoria;
         fila.appendChild(colCat);
 
-        // Botón GitHub
+        // Repositorio con botón de GitHub
         let colRepo = document.createElement("td");
         let btnRepo = document.createElement("button");
         btnRepo.className = "btn-repo";

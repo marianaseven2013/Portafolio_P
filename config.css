@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    color: #1d1d1d;
+    background-image: url(https://i.pinimg.com/1200x/1d/12/de/1d12deb0717df3f0864cb79868b9117f.jpg);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    grid-template-areas: 
+        "header header"
+        "apps centro";
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}

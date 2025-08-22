@@ -1,0 +1,33 @@
+.header-container {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-image: url(https://i.pinimg.com/736x/23/36/c7/2336c7a3389dc7d3f4f7735efcb073fa.jpg);
+    border-bottom: 1px solid #e3e3e3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-container h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.btn-certificados {
+    background: rgba(40, 47, 77, 0.877); /* Blanco con 20% de opacidad */
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    color: white;
+}
+
+.btn-certificados:hover {
+    transition: 0.6s;
+    background-color: rgb(43, 82, 82);
+    width: 9rem;
+}

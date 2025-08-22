@@ -1,0 +1,40 @@
+.apps-container {
+    grid-area: apps;
+    background-color: white;
+    border-right: 1px solid #e3e3e3;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://i.pinimg.com/736x/23/36/c7/2336c7a3389dc7d3f4f7735efcb073fa.jpg);
+
+}
+
+.apps-container h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.stacks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    gap: 15px;
+    justify-content: center;
+}
+
+.stacks-grid img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.stacks-grid img:hover {
+    transform: scale(1.1);
+}
